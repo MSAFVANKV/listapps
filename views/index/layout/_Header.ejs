@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title><%= docTitle %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/boxanimation.css">
+    <link rel="stylesheet" href="/css/flavour.css">
+
+
+    <!-- <meta 
+    http-equiv="refresh"
+    content="2"
+    > -->
+</head>
+<body>
+    
+    <header class=" ">
+        <div class="lg:flex hidden items-center justify-center lg:justify-center p-10">
+            
+            <ul class="flex items-center justify-center lg:justify-center cursor-pointer select-none">
+                <li>
+                    <a href="/" id="homeLink" class="text-lg font-bold text-black hover:text-red-500 transition duration-300 transform hover:rotate-3">Home</a>
+                </li>
+                <li>
+                    <a href="/store" id="storeLink" class="ml-4 text-lg text-black hover:text-red-500 transition duration-300 transform hover:rotate-3">Store</a>
+                </li>
+                <li>
+                    <a href="/flavor" id="flavorLink" class="ml-4 text-lg text-black hover:text-red-500 transition duration-300 transform hover:rotate-3">Flavor</a>
+
+                </li>
+                <li>
+                    <a href="/jqury" id="flavorLink" class="ml-4 text-lg text-black hover:text-red-500 transition duration-300 transform hover:rotate-3">jqury</a>
+
+                </li>
+                <li>
+                    <a href="/ajax" id="flavorLink" class="ml-4 text-lg text-black hover:text-red-500 transition duration-300 transform hover:rotate-3">ajax</a>
+
+                </li>
+                <li>
+                    <a  id="function_hover" class="ml-4 text-lg text-black hover:text-red-500 transition duration-300 transform hover:rotate-3 relative" >Functions</a>
+
+                </li>
+            </ul>
+        </div>
+
+        <div id="func_table" class="w-[40%] p-10  bg-[#E5E5E5] text-black rounded-3xl select-none absolute right-1/3 top-[100px]">
+            <!-- <ul class="grid grid-cols-5 gap-10 font-bold">
+                <li class="cursor-pointer p-1"><a href="/palendroma"  class="text-lg">Palandroma</a></li>
+                <li class="cursor-pointer p-1"><a href="/prime" class="text-lg">PrimeNumber</a></li>
+
+            </ul> -->
+            <div class="grid lg:grid-cols-5 grid-cols-3 z-50 gap-[4rem] justify-items-center items-center">
+                <span><a href="/palendroma"  class="text-lg">Palandroma</a></span>
+                <span><a href="/prime" class="text-lg">PrimeNumber</a></span>
+                <span><a href="/todolist" class=" text-black ">todolist</a></span>
+
+            </div>
+        </div>
+    
+        <!-- Hamburger button for smaller screens -->
+        <div class="lg:hidden bg-gray-800 ">
+            <button id="toggleBtn" class="text-white focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+    
+        <!-- Dropdown menu for smaller screens -->
+        <div id="dropdownMenu" class="hidden lg:hidden absoluteleft-0 right-0 bg-gray-800 p-2 z-[999]">
+            <a href="/" class="block text-white font-bold py-2 px-4">Home</a>
+            <a href="/store" class="block text-white py-2 px-4">Store</a>
+            <a href="/flavor" class="block text-white py-2 px-4">Flavor</a>
+            <a href="/jqury" class="block text-white py-2 px-4">jqury</a>
+            <a href="/ajax" class="block text-white py-2 px-4">ajax</a>
+            <a  id="function_hover" class="block text-white py-2 px-4 cursor-pointer relative" >Functions</a>
+
+        </div>
+    </header>
+<script src="/js/jqury/jqury.js" type="text/javascript"></script>
+    
+    <script>
+        document.getElementById('toggleBtn').addEventListener('click', function () {
+            document.getElementById('dropdownMenu').classList.toggle('hidden');
+        });
+
+        $("document").ready(function(){
+            $("#func_table").hide(); // hide initially
+
+            // $("#function_hover").mouseenter(function(){
+            //     $("#func_table").show(); // show on hover
+            // });
+            $("#function_hover").click(function(){
+                $("#func_table").show(); // show on hover
+            });
+
+            $("#function_hover").dblclick(function(){
+                $("#func_table").hide(); // hide on mouse leave
+            });
+        });
+
+    </script>
+    <!-- <script>
+        $(document).ready(function(){
+            $("#func_table").hide(); // hide initially
+
+            $("#function_hover, #func_table").mouseenter(function(){
+                $("#func_table").show(); // show on hover
+            });
+
+            $("#function_hover, #func_table").mouseleave(function(e){
+                // Check if the mouse is not inside both function_hover and func_table
+                if (!$(e.target).closest('#function_hover, #func_table').length) {
+                    $("#func_table").hide(); // hide on mouse leave
+                }
+            });
+        });
+    </script> -->

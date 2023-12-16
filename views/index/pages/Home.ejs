@@ -1,0 +1,81 @@
+
+<%- include('../layout/_Header') %>
+
+<section id="">
+    <input type="text" name="name" id="name" class="border p-5">
+    <button onclick="greet()">Click</button>
+    <div class="greet">
+
+    </div>
+</section>
+
+<section class="business">
+    <div id="c-wrapper">
+        <h2>The Agility Factor</h2>
+        <div class="b-index-bnn m-ready m-transition">
+            
+            <div class="gl-wrap">
+                <ul class="r-menu">
+                    <li class="odd"><a href="#">Social Network</a></li>
+                    <li class="even is-active"><a href="#">Tasks &amp; Projects</a></li>
+                    <li class="odd"><a href="#">Chat &amp; Video</a></li>
+                    <li class="even"><a href="#">Documents</a></li>
+                    <li class="odd"><a href="#">Drive</a></li>
+                    <li class="even"><a href="#">aaa</a></li>
+                    <li class="odd"><a href="#">bbb</a></li>
+                    <li class="even"><a href="#">bbb</a></li>
+                    <li class="odd"><a href="#">bbb</a></li>
+                    <li class="even"><a href="#">bbb</a></li>
+                </ul>
+                <ul class="b-carousel">
+                    <li class="odd" style="top: -73.2795px; left: -415.589px;"><a href="#"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></a></li>
+                    <li class="even" style="top: -323.271px; left: -271.256px;"><a href="#"><i class="fa fa-line-chart" aria-hidden="true"></i></a></li>
+                    <li class="odd is-active" style="top: -422px; left: 0px;"><a href="#"><i class="fa fa-briefcase" aria-hidden="true"></i></a></li>
+                    <li class="even" style="top: -323.271px; left: 271.256px;"><a href="#"><i class="fa fa-cogs" aria-hidden="true"></i></a></li>
+                    <li class="odd" style="top: -73.2795px; left: 415.589px;"><a href="#"><i class="fa  fa-database" aria-hidden="true"></i></a></li>
+                    <li class="even" style="top: 211px; left: 365.463px;"><a href="#"><i class="fa fa-plug" aria-hidden="true"></i></a></li>
+                    <li class="odd" style="top: 396.55px; left: 144.333px;"><a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a></li>
+                    <li class="even" style="top: 396.55px; left: -144.333px;"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    <li class="odd" style="top: 211px; left: -365.463px;"><a href="#"><i class="fa fa-level-up" aria-hidden="true"></i></a></li>
+                </ul>
+                <ul class="r-text">
+                    <li id="first" class="odd" style="display: none;"><h3>Innovation</h3><p>We provide innovative ideas for the development of your business. We help you to be ingenious and inventive by motivating you with new business ideas with the help of emerging technology and new advanced implementation techniques.</p></li>
+
+                    <li class="even" style="display: none;"><h3>Business Analysis and Brainstorming</h3><p>Close inspection of business requirements with the help of a group using the creativity techniques. The lists of ideas are gathered from the team and build a strategic plan regarding the solution to be implemented in the current scenario.</p></li>
+
+                    <li class="odd" style="display: table-cell;"><h3>Sourcing and Replenishment</h3><p>During the process we point out the pros and cons of your business structure and methodology. We will take the effort and help you to implement the ideas that remodel the same which will give an ultimate solution to you.</p></li>
+
+                    <li class="even" style="display: none;"><h3>Build Solution &amp; Technical Deployment</h3><p>After the thorough study and analysis, we build a product that overcomes the disadvantages of your business with the help of technology. You will get complete trust and confidence upon the deployment of the solution.</p></li>
+                    <li class="odd" style="display: none;"><h3>Implementation of Solution</h3><p>We implement the solution in such a way that the business partnership made by us will be a fixed asset to you and also provide you to get upgraded and advanced in the field you are dealing with. You will become  one of the top-notch in your field.</p></li>
+                    <li class="even" style="display: none;"><h3>Stabilization and Integration</h3><p>We have yet another advantage of stabilization and integration of the application we deliver to you. Our solution or application will never fluctuate in the overall behavior and nature of working. Our quality team monitors the applications.</p></li>
+                    <li class="odd" style="display: none;"><h3>Customer Delight</h3><p>Our business paradigms focus ultimately on the customer satisfaction. They must be happy with the service and support we offer to them. Being a fully customer oriented company; our management never compromises on quality and security of the product or productized service.</p></li>
+                    <li class="even" style="display: none;"><h3>Constant Market Focus</h3><p>The constant and continuous market study done by our analysts team always ensures that once you are in alliance with us, get demarked in the competitive world; instead going to be in one of the top most ranking position. We never stop the support to you.</p></li>
+                    <li class="odd" style="display: none;"><h3>Enhancement and Upgrading</h3><p>Our priority is to enhance the solution or application provided to you. We assist you to explore the new areas of your own business field.</p></li>
+
+                </ul>
+                <ul class="b-bnn-list">
+                    <li class="n1 odd"></li>
+                    <li class="n2 even" style=""></li>
+                    <li class="n3 odd" style=""></li>
+                    <li class="n4 even" style=""></li>
+                    <li class="n5 odd" style=""></li>
+                    <li class="n6 even"></li>
+                    <li class="n7 odd"></li>
+                    <li class="n8 even" style=""></li>
+                    <li class="n9 odd" style=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+function greet() {
+   const name =  document.getElementById('name').value;
+   const string = "Hello" + name
+   document.getElementsByClassName("greet")[0].innerHTML = string;
+}
+
+</script>
+<%- include('../layout/_Footer') %>
