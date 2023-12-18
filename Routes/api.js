@@ -72,4 +72,12 @@ router.route('/')
             docTitle:"todoList"
         })
     });
+    router.route('/clock')
+    .get((req, res) => {
+        res.render("../views/index/pages/Clock",
+        
+        {
+            docTitle:"Clock"
+        })
+    });
 export default router;

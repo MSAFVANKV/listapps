@@ -18,77 +18,122 @@
 </head>
 <body>
     
-    <header class=" ">
-        <div class="lg:flex hidden items-center justify-center lg:justify-center p-10">
+    
+        <!-- <div class="lg:flex hidden items-center justify-center lg:justify-center p-10">
             
-            <ul class="flex items-center justify-center lg:justify-center cursor-pointer select-none">
-                <li>
-                    <a href="/" id="homeLink" class="text-lg font-bold text-black hover:text-red-500 transition duration-300 transform hover:rotate-3">Home</a>
+            
+        </div> -->
+        <nav>
+            <div class="logo">TerboFusion</div>
+            <label for="btn" class="icon">
+                <span class="fa fa-bars">///</span>
+            </label>
+            <input type="checkbox" id="btn" class="inputbar">
+            <!-- <ul class="sidebar">
+                <li >
+                    <a href="#" >
+                        <svg onclick=closeSidebar() xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                    </a>
                 </li>
                 <li>
-                    <a href="/store" id="storeLink" class="ml-4 text-lg text-black hover:text-red-500 transition duration-300 transform hover:rotate-3">Store</a>
+                    <a href="/" id="homeLink" class="">Home</a>
                 </li>
                 <li>
-                    <a href="/flavor" id="flavorLink" class="ml-4 text-lg text-black hover:text-red-500 transition duration-300 transform hover:rotate-3">Flavor</a>
+                    <a href="/store" id="storeLink" class="">Store</a>
+                </li>
+                <li>
+                    <a href="/flavor" id="flavorLink" class="">Flavor</a>
 
                 </li>
                 <li>
-                    <a href="/jqury" id="flavorLink" class="ml-4 text-lg text-black hover:text-red-500 transition duration-300 transform hover:rotate-3">jqury</a>
+                    <a href="/jqury" id="flavorLink" class="">jqury</a>
 
                 </li>
                 <li>
-                    <a href="/ajax" id="flavorLink" class="ml-4 text-lg text-black hover:text-red-500 transition duration-300 transform hover:rotate-3">ajax</a>
+                    <a href="/ajax" id="flavorLink" class="">ajax</a>
 
                 </li>
                 <li>
-                    <a  id="function_hover" class="ml-4 text-lg text-black hover:text-red-500 transition duration-300 transform hover:rotate-3 relative" >Functions</a>
+                    <a href="#" id="function_hover" class=" relative" >Functions</a>
 
                 </li>
-            </ul>
-        </div>
-
-        <div id="func_table" class="w-[40%] p-10  bg-[#E5E5E5] text-black rounded-3xl select-none absolute right-1/3 top-[100px]">
-            <!-- <ul class="grid grid-cols-5 gap-10 font-bold">
-                <li class="cursor-pointer p-1"><a href="/palendroma"  class="text-lg">Palandroma</a></li>
-                <li class="cursor-pointer p-1"><a href="/prime" class="text-lg">PrimeNumber</a></li>
-
             </ul> -->
-            <div class="grid lg:grid-cols-5 grid-cols-3 z-50 gap-[4rem] justify-items-center items-center">
-                <span><a href="/palendroma"  class="text-lg">Palandroma</a></span>
-                <span><a href="/prime" class="text-lg">PrimeNumber</a></span>
-                <span><a href="/todolist" class=" text-black ">todolist</a></span>
+            <!-- ------- -->
+            <ul class="">
+                <li class="hideOnMob">
+                    <a href="/" id="homeLink" class="">Home</a>
+                </li>
+                  <!--  -->
+                  <li class="hideOnMob">
+                    <label for="btn-1" class="show" >Functions +</label>
+                    <a href="#" id="function_hover" class="" >Functions</a>
+                    <input type="checkbox" id="btn-1" class="inputbar">
+                    <!-- dropdown -->
+                    <ul class="dropdowns">
+                        <li>
+                        <a href="/palendroma" class="">Palandroma</a>
+                        </li>
+                        <li>
+                            <a href="/prime" class="">PrimeNumber</a>
+                        </li>
+                        <li>
+                            <a href="/todolist" class="  ">todolist</a>
+                        </li>
+                        <li>
+                             <label for="btn-2" class="show" >More +</label>
+                            <a href="#">More
+                                <span class="fa fa-plus">+</span>
+                            </a>
+                            <input type="checkbox" id="btn-2" class="inputbar">
+                            <ul>
+                                <li>
+                                    <a href="/clock">Clock</a>
+                                </li>
+                            </ul>
+                        </li>
+                           
+                    </ul>
+                </li>
+                <!--  -->
+                <li class="hideOnMob">
+                    <a href="/store" id="storeLink" class="">Store</a>
+                </li>
+                <li class="hideOnMob">
+                    <a href="/flavor" id="flavorLink" class="">Flavor</a>
 
-            </div>
-        </div>
-    
-        <!-- Hamburger button for smaller screens -->
-        <div class="lg:hidden bg-gray-800 ">
-            <button id="toggleBtn" class="text-white focus:outline-none">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-        </div>
-    
-        <!-- Dropdown menu for smaller screens -->
-        <div id="dropdownMenu" class="hidden lg:hidden absoluteleft-0 right-0 bg-gray-800 p-2 z-[999]">
-            <a href="/" class="block text-white font-bold py-2 px-4">Home</a>
-            <a href="/store" class="block text-white py-2 px-4">Store</a>
-            <a href="/flavor" class="block text-white py-2 px-4">Flavor</a>
-            <a href="/jqury" class="block text-white py-2 px-4">jqury</a>
-            <a href="/ajax" class="block text-white py-2 px-4">ajax</a>
-            <a  id="function_hover" class="block text-white py-2 px-4 cursor-pointer relative" >Functions</a>
+                </li>
+              
+                <li class="hideOnMob">
+                    <a href="/jqury" id="flavorLink" class="">jqury</a>
 
-        </div>
-    </header>
+                </li>
+                <li class="hideOnMob">
+                    <a href="/ajax" id="flavorLink" class="">ajax</a>
+
+                </li>
+               
+                <!-- <li onclick=showSidebar() class="menu-button">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                    </a>
+                </li> -->
+            </ul>
+        </nav>
+
 <script src="/js/jqury/jqury.js" type="text/javascript"></script>
     
+<script>
+   
+    function showSidebar() {
+        const sideBar = document.querySelector(".sidebar");
+        sideBar.style.display = 'flex'
+    }
+    function closeSidebar() {
+        const sideBar = document.querySelector(".sidebar");
+        sideBar.style.display = 'none'
+    }
+</script>
     <script>
-        document.getElementById('toggleBtn').addEventListener('click', function () {
-            document.getElementById('dropdownMenu').classList.toggle('hidden');
-        });
 
         $("document").ready(function(){
             $("#func_table").hide(); // hide initially
@@ -106,19 +151,4 @@
         });
 
     </script>
-    <!-- <script>
-        $(document).ready(function(){
-            $("#func_table").hide(); // hide initially
 
-            $("#function_hover, #func_table").mouseenter(function(){
-                $("#func_table").show(); // show on hover
-            });
-
-            $("#function_hover, #func_table").mouseleave(function(e){
-                // Check if the mouse is not inside both function_hover and func_table
-                if (!$(e.target).closest('#function_hover, #func_table').length) {
-                    $("#func_table").hide(); // hide on mouse leave
-                }
-            });
-        });
-    </script> -->
